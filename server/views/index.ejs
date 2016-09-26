@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MY APP</title>
+    <script src="main.js"></script>
+</head>
+<body>
+<h1>list2read</h1>
+<div>
+    <form action="/books" method="POST">
+        <div>
+            <input type="text" placeholder="Author" name="author" required>
+        </div>
+        <div>
+            <input type="text" placeholder="Book title" name="title" required>
+        </div>
+        <div style="width: 200px;margin-top: 20px; text-align: right;">
+            <button type="submit">Add</button>
+        </div>
+    </form>
+</div>
+
+<div>
+    <div style="margin-top: 50px;"></div>
+    <button id="update"> Darth Vadar invades! </button>
+</div>
+<div>
+    <h2>Delete Darth Vadar's first quote</h2>
+    <button id="delete"> Delete first Darth Vadar quote </button>
+</div>
+<h3>Books list</h3>
+<ul class="books">
+    <% for(var i=0; i < books.length; i++) {%>
+    <li class="book" style="padding: 5px;">
+        <span><%=i+1+'. '%></span>
+        <span><b><%= books[i].author %></b> - </span>
+        <span><i><%= books[i].title %></i></span>
+        <button class="js-update">Change</button>
+        <button class="js-del">Delete</button>
+    </li>
+    <% } %>
+</ul>
+</body>
+</html>

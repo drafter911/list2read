@@ -1,0 +1,48 @@
+$media-small-screen: 640px;
+$media-medium-screen: 980px;
+$media-medium-landscape-screen: 1024px;
+$media-small-desktop-screen: 1024px;
+
+// ResetCSS, normalize, layout, fonts, typography
+@import "base/index";
+
+//Utils
+//Common styles, helpers, mixins, variables, sprites, etc.
+@import "utils/index";
+
+//Vendors
+//Libraries, frameworks, etc.
+@import "vendors/index";
+
+//Components
+//Header, footer, hamburger menu, something like "custom checkBox" or "range slider"
+@import "components/index";
+
+//Pages
+// Stylesheets for pages
+@import "pages/index";
+
+
+//Styles for desktop with small resolution
+@media
+only screen and (min-width: $media-medium-screen) and (max-width: $media-small-desktop-screen) {
+  @import "media/smallDesktop/index";
+}
+
+//Styles for mobile
+@media
+only screen and (max-width: $media-small-screen - 1px),
+only screen and (max-width: $media-small-screen) and (orientation: landscape){
+  @import "media/phone/index";
+}
+
+//Styles for tablet
+@media
+only screen and (min-width: $media-small-screen) and (max-width: $media-medium-screen - 1px) and (orientation: portrait) ,
+only screen and (min-width: $media-small-screen + 1px) and (max-width: $media-medium-landscape-screen) and (orientation: landscape) {
+  @import 'media/tablet/index';
+}
+
+
+//----test import----DELETE--THIS--AFTER--START----
+@import "test/test";
