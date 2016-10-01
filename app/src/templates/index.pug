@@ -1,5 +1,5 @@
 doctype html
-html(lang='en')
+html(lang='en', ng-app='app')
     head
         meta(charset='UTF-8')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
@@ -8,15 +8,7 @@ html(lang='en')
         script(src='js/bundle.js')
         //script(src='js/bundle.min.js')
     body
-        div Start page
-        br
-        .aa
-        br
-        .js-test
-        .bb TEXT
-        br
-        div
-            button.js-load-amd Load dynamic script
-        br
-        div
-            a(href='pages/Page1.html') Generated page
+        div.main-wrapper
+            header.header
+            ui-view
+        footer.footer

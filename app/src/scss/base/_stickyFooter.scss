@@ -1,0 +1,24 @@
+//$footer-height: 507px;
+$footer-height: 60px;
+
+html, body {
+	height: 100%;
+}
+
+.main-wrapper {
+	//height: 100%;
+	min-height: 100%;
+	//equal to footer height
+	margin-bottom: -$footer-height;
+	&:after {
+		content: '';
+		display: block;
+		//equal to footer height
+		height: $footer-height;
+	}
+}
+
+.footer {
+	height: $footer-height;
+	//background: #b8b8b8;
+}

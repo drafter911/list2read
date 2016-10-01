@@ -1,0 +1,24 @@
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+a {
+	cursor: pointer;
+}
+
+//----War with Bootstrap styles----
+
+.customSelectBox .bootstrap-select .dropdown-toggle:focus,
+.customSelectBox2 .bootstrap-select .dropdown-toggle:focus,
+button.btn:focus,
+input, textarea {
+	outline: none !important;
+}
