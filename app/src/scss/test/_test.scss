@@ -1,16 +1,8 @@
-@font-face {
-  font-family: 'Roboto-Black';
-  src: url('../fonts/Roboto-Black.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
+.books-list {
+	margin-left: 50px;
 
-.aa {
-  @include bg($arrowUp);
-}
+	&__item {
+		padding: 10px 15px;
+	}
 
-.bb {
-  font-weight: bold;
-  color: green;
-  font-family: 'Roboto-Black', sans-serif;
 }

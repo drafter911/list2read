@@ -1,0 +1,17 @@
+<h2>Books list</h2>
+<ul ng-repeat="book in books.books" class="books-list">
+    <li class="books-list__item">
+        <div>
+            <span><b>ID: </b></span>
+            <span>{{book._id}}</span>
+        </div>
+        <div>
+            <span><b>Author: </b></span>
+            <span>{{book.author}}</span>
+        </div>
+        <div>
+            <span><b>Title: </b></span>
+            <span><i>{{book.title}}</i></span>
+        </div>
+    </li>
+</ul>

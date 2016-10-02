@@ -1,4 +1,4 @@
-export default class HomeController {
+export default class HomeCtrl {
     //constructor(randomNames) {
     constructor() {
         //this.random = randomNames;

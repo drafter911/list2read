@@ -7,17 +7,31 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(express.static('public'));
+//app.use(express.static('public'));
+app.use(express.static('../app/dist'));
 
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
+    //db.collection('books').find().toArray((err, result) => {
+    //    if (err) {
+    //        return console.log(err);
+    //    }
+        // renders index.ejs
+        //res.render('index.ejs', {books: result});
+        res.render('index.html', {books: result});
+    //})
+});
+
+app.get('/books', (req, res) => {
     db.collection('books').find().toArray((err, result) => {
         if (err) {
             return console.log(err);
         }
         // renders index.ejs
-        res.render('index.ejs', {books: result});
+        //res.render('index.ejs', {books: result});
+        //res.render('index.html', {books: result});
+        res.send(result)
     })
 });
 
