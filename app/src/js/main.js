@@ -4,7 +4,8 @@ import routing from './_config/app.config';
 import footer from './Directives/Footer'
 import header from './Directives/Header'
 import home from './Features/Home';
-import books from './Features/Books'
+import books from './Features/Books';
+import articles from './Features/Articles';
 
 let app = angular.module('app',
     [
@@ -12,7 +13,8 @@ let app = angular.module('app',
         header,
         footer,
         home,
-        books
+        books,
+        articles
     ]);
 
 app.config(routing);
