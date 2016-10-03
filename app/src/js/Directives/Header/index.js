@@ -1,4 +1,5 @@
 import angular from 'angular';
+import HistoryNav from './../components/historyNavigation';
 
 function Header () {
     return {
@@ -10,6 +11,6 @@ function Header () {
     }
 }
 
-export default angular.module('directives.header', [])
+export default angular.module('directives.header', [HistoryNav])
     .directive('header', Header)
     .name;
