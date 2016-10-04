@@ -5,6 +5,7 @@ import footer from './Directives/Footer'
 import header from './Directives/Header'
 import home from './Features/Home';
 import books from './Features/Books';
+import book from './Features/Book';
 import articles from './Features/Articles';
 
 let app = angular.module('app',
@@ -14,6 +15,7 @@ let app = angular.module('app',
         footer,
         home,
         books,
+        book,
         articles
     ]);
 

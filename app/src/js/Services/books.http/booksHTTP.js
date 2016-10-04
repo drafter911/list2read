@@ -12,6 +12,13 @@ class booksHttp {
                 calback(response.data, i);
             });
     }
+
+    getBook(calback, i, a) {
+        return this.$http({method: 'GET', url: '/books/'})
+            .then((response) => {
+                calback(response.data, i);
+            });
+    }
 }
 
 booksHttp.$inject = ['$http'];

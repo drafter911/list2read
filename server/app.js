@@ -41,7 +41,7 @@ app.get('/books/:_id', (req, res) => {
                 return console.log(e);
             }
             res.send(result);
-            db.close();
+            //db.close();
         });
     })
 });
@@ -110,7 +110,7 @@ app.get('/articles/:_id', (req, res) => {
                 return console.log(e);
             }
             res.send(result);
-            db.close();
+            //db.close();
         });
     })
 });
