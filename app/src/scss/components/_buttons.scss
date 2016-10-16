@@ -1,0 +1,17 @@
+.btn {
+	height: 34px;
+	padding: 5px 20px;
+	line-height: 1;
+	text-align: center;
+	border: 2px solid;
+	background-color: transparent;
+}
+
+.btn--green {
+	color: lightgreen;
+	border-color: lightgreen;
+}
+
+.btn--round {
+	border-radius: 5px;
+}
