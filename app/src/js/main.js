@@ -7,6 +7,7 @@ import home from './Features/Home';
 import books from './Features/Books';
 import book from './Features/Book';
 import articles from './Features/Articles';
+import addItem from './Directives/components/addItem';
 
 let app = angular.module('app',
     [
@@ -16,7 +17,8 @@ let app = angular.module('app',
         home,
         books,
         book,
-        articles
+        articles,
+        addItem
     ]);
 
 app.config(routing);

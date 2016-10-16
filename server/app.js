@@ -88,9 +88,11 @@ app.put('/books', (req, res) => {
 });
 
 app.delete('/books', (req, res) => {
-    db.collection('books').findOneAndDelete({title: req.body.title},
+    db.collection('books').findOneAndDelete({_id: req.body._id},
         (err, result) => {
             if (err) return res.send(500, err);
+            console.log(err)
+            console.log(result)
             res.send('Selected book was successfully deleted.')
         })
 });

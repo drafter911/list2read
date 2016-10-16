@@ -6,8 +6,8 @@ class booksHttp {
         this.$http = $http;
     }
 
-    getBooks(calback, i) {
-        return this.$http({method: 'GET', url: '/books'})
+    getBooks(url, calback, i) {
+        return this.$http({method: 'GET', url: url})
             .then((response) => {
                 calback(response.data, i);
             });
@@ -19,9 +19,20 @@ class booksHttp {
                 calback(response.data, i);
             });
     }
+
+    addBook(url, data, callback) {
+        return this.$http({
+            method: 'POST',
+            url: '/books/',
+            data: data
+        })
+            .then((response) => {
+                callback();
+            });
+    }
 }
 
-booksHttp.$inject = ['$http'];
+booksHttp.$inject = ['$http', '$window'];
 export default angular.module('services.books-http', [])
-    .service('booksHttp', booksHttp)
+    .service('booksHttp', booksHttp, '$window')
     .name;
