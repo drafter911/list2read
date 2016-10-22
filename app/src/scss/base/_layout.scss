@@ -1,5 +1,33 @@
 /* Susy greed */
 
-.sidebar {
+@import "susy";
 
+/* Global susy settings*/
+
+$susy: (
+	container: 1170px,
+	columns: 24,
+	gutters: 1
+);
+
+/* Layout classes */
+
+.l-row {
+	margin-bottom: 1.5em;
+}
+
+.l-container {
+	@include container();
+}
+
+.l-sidebar {
+	@include span(8);
+	height: 400px;
+	background-color: grey;
+}
+
+.l-content {
+	@include span(16 last);
+	height: 400px;
+	background-color: yellow;
 }
