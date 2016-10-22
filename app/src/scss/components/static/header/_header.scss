@@ -1,8 +1,10 @@
 .header {
-	display: flex;
-	height: 60px;
+	padding: 20px 0;
 	background-color: #B8B8B8;
-	> * {
-		margin: auto;
+
+	& > .l-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 }
