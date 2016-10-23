@@ -3,12 +3,12 @@ $media-medium-screen: 980px;
 $media-medium-landscape-screen: 1024px;
 $media-small-desktop-screen: 1024px;
 
-// ResetCSS, normalize, layout, fonts, typography
-@import "base/index";
-
 //Utils
 //Common styles, helpers, mixins, variables, sprites, etc.
 @import "utils/index";
+
+// ResetCSS, normalize, layout, fonts, typography
+@import "base/index";
 
 //Vendors
 //Libraries, frameworks, etc.
