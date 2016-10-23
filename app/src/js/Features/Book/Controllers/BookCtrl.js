@@ -1,15 +1,13 @@
 import angular from 'angular';
 export default class BookCtrl {
 
-    constructor(booksHttp, $stateParams) {
-        $stateParams._id;
+    constructor($stateParams, booksHttp) {
         booksHttp.getBook(this.getBook, this, $stateParams._id);
-
     }
 
     getBook(data, context) {
-        context.books = data;
+        context.book = data;
     }
 }
 
-BookCtrl.$inject = ['booksHttp', '$scope'];
+BookCtrl.$inject = ['$stateParams','booksHttp'];

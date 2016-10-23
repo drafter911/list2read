@@ -1,4 +1,4 @@
-routes.$inject = ['$stateProvider'];
+routes.$inject = ['$stateProvider', '$urlRouterProvider'];
 
 export default function routes($stateProvider) {
     $stateProvider

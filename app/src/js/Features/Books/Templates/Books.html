@@ -12,7 +12,8 @@
         </div>
         <div>
             <span><b>Title: </b></span>
-            <span><a ng-href="{{'#/books/'+ book._id}}"><i>{{book.title}}</i></a></span>
+            <span><a ui-sref="book({_id: book._id})"><i>{{book.title}}</i></a></span>
+            <!--<span><a ui-sref="books.book({_id: '57e98568d73c10132018d627'})"><i>{{book.title}}</i></a></span>-->
             <!--<span><a ng-href="{{'#/books/57e98568d73c10132018d627'}}"><i>{{book.title}}</i></a></span>-->
         </div>
     </li>

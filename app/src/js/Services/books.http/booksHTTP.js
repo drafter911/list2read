@@ -14,9 +14,9 @@ class booksHttp {
     }
 
     getBook(calback, i, a) {
-        return this.$http({method: 'GET', url: '/books/'})
+        return this.$http({method: 'GET', url: '/books/'+a})
             .then((response) => {
-                calback(response.data, i);
+                calback(response.data[0], i);
             });
     }
 
