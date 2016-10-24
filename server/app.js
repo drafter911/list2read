@@ -88,11 +88,12 @@ app.put('/books', (req, res) => {
 });
 
 app.delete('/books', (req, res) => {
-    db.collection('books').findOneAndDelete({_id: req.body._id},
+    db.collection('books').deleteOne({_id: new ObjectId(req.body._id)},
         (err, result) => {
-            if (err) return res.send(500, err);
-            console.log(err)
-            console.log(result)
+            if (err) {
+                return res.send(500, err);
+            }
+            console.log(result.toJSON());
             res.send('Selected book was successfully deleted.')
         })
 });
@@ -155,7 +156,7 @@ app.put('/articles', (req, res) => {
 });
 
 app.delete('/articles', (req, res) => {
-    db.collection('articles').findOneAndDelete({title: req.body.title},
+    db.collection('articles').deleteOne({_id: new ObjectId(req.body._id)},
         (err, result) => {
             if (err) return res.send(500, err);
             res.send('Selected article was successfully deleted.')

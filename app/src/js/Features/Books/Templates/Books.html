@@ -9,6 +9,8 @@
         <div>
             <span><b>Author: </b></span>
             <span>{{book.author}}</span>
+            <button ng-click="updateBook(book._id)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></i></button>
+            <button ng-click="deleteBook(book._id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
         </div>
         <div>
             <span><b>Title: </b></span>

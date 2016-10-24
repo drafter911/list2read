@@ -30,6 +30,23 @@ class booksHttp {
                 callback();
             });
     }
+
+    deleteBook(url, data, callback) {
+        console.log(data);
+        return this.$http({
+            method: 'DELETE',
+            url: '/books/',
+            data: {
+                _id: data
+            },
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then((response) => {
+                callback();
+            });
+    }
 }
 
 booksHttp.$inject = ['$http', '$window'];
