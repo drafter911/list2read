@@ -8,6 +8,7 @@ import books from './Features/Books';
 import book from './Features/Book';
 import articles from './Features/Articles';
 import addItem from './Directives/components/addItem';
+import filter from './Directives/components/filter';
 
 let app = angular.module('app',
     [
@@ -18,7 +19,8 @@ let app = angular.module('app',
         books,
         book,
         articles,
-        addItem
+        addItem,
+        filter
     ]);
 
 app.config(routing);

@@ -1,22 +1,27 @@
-<div add-item></div>
-<h2>Books list</h2>
-<ul ng-repeat="book in books.books" class="books-list">
-    <li class="books-list__item">
-        <div>
-            <span><b>ID: </b></span>
-            <span>{{book._id}}</span>
-        </div>
-        <div>
-            <span><b>Author: </b></span>
-            <span>{{book.author}}</span>
-            <button ng-click="updateBook(book._id)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></i></button>
-            <button ng-click="deleteBook(book._id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-        </div>
-        <div>
-            <span><b>Title: </b></span>
-            <span><a ui-sref="book({_id: book._id})"><i>{{book.title}}</i></a></span>
-            <!--<span><a ui-sref="books.book({_id: '57e98568d73c10132018d627'})"><i>{{book.title}}</i></a></span>-->
-            <!--<span><a ng-href="{{'#/books/57e98568d73c10132018d627'}}"><i>{{book.title}}</i></a></span>-->
-        </div>
-    </li>
-</ul>
+<div class="l-sidebar">
+    <div filter></div>
+    <h2>Books list</h2>
+    <ul ng-repeat="book in books.books" class="books-list">
+        <li class="books-list__item">
+            <div>
+                <span><b>ID: </b></span>
+                <span>{{book._id}}</span>
+            </div>
+            <div>
+                <span><b>Author: </b></span>
+                <span>{{book.author}}</span>
+                <button ng-click="updateBook(book._id)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></i></button>
+                <button ng-click="deleteBook(book._id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+            </div>
+            <div>
+                <span><b>Title: </b></span>
+                <span><a ui-sref="book({_id: book._id})"><i>{{book.title}}</i></a></span>
+                <!--<span><a ui-sref="books.book({_id: '57e98568d73c10132018d627'})"><i>{{book.title}}</i></a></span>-->
+                <!--<span><a ng-href="{{'#/books/57e98568d73c10132018d627'}}"><i>{{book.title}}</i></a></span>-->
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="l-container">
+    <h1>Book content</h1>
+</div>
