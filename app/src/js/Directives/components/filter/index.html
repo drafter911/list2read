@@ -1,8 +1,8 @@
-<div>
-    <div class="h4">Filter</div>
-    <ul class="category">
+<h4>
+    <h4>Filter</h4>
+    <ul class="category reset-list">
         <li class="category__item" ng-repeat="category in categories">
-            <label for="{{category.id}}">
+            <label class="category__item--interactive" for="{{category.id}}">
                 <input type="checkbox" id="{{category.id}}">
                 {{category.name}}
             </label>

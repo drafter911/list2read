@@ -1,0 +1,6 @@
+.category {
+	&__item--interactive:hover {
+		cursor: pointer;
+		user-select: none;
+	}
+}

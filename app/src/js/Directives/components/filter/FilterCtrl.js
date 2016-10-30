@@ -4,7 +4,7 @@ export default class FilterCtrl {
         $scope.categories = [
             {'id': 0, 'name': 'HTML'},
             {'id': 1, 'name': 'CSS'},
-            {'id': 0, 'name': 'JS'}
+            {'id': 2, 'name': 'JS'}
         ]
     }
 }
